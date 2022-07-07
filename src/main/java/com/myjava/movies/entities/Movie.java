@@ -1,6 +1,9 @@
 package com.myjava.movies.entities;
 
+import org.hibernate.validator.constraints.Length;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Movie {
@@ -8,6 +11,8 @@ public class Movie {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "id", nullable = false)
     private Long id;
+    @Length(min = 2)
+    @NotNull(message = "Le nom ne peut être null")
     private String name;
 
     public Movie() {
