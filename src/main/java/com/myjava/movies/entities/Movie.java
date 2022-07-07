@@ -1,4 +1,4 @@
-package com.example.demo.entities;
+package com.myjava.movies.entities;
 
 import javax.persistence.*;
 
@@ -9,14 +9,6 @@ public class Movie {
     @Column(name = "id", nullable = false)
     private Long id;
     private String name;
-
-    public Long getId2() {
-        return id2;
-    }
-
-    public void setId2(Long id2) {
-        this.id2 = id2;
-    }
 
     public Movie() {
     }
